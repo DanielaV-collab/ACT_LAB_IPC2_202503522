@@ -1,0 +1,13 @@
+### Paso A: Consultar estado inicial
+GET http://localhost:5000/api/arbol
+
+###
+
+### Paso B: Insertar el nodo 20 para balancear
+POST http://localhost:5015/api/arbol/insertar
+Content-Type: application/json
+
+{
+  "Id": 20,
+  "etiqueta": "Nieto Derecho"
+}
