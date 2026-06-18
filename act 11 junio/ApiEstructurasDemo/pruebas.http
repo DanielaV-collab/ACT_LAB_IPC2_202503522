@@ -1,0 +1,13 @@
+### Prueba 1: Obtener todos los nodos (GET)
+GET http://localhost:5213/api/nodos
+
+###
+
+### Prueba 2: Insertar un nuevo nodo (POST)
+POST http://localhost:5213/api/nodos
+Content-Type: application/json
+
+{
+    "id": 15,
+    "valor": "Nuevo Nodo Derecho"
+}
