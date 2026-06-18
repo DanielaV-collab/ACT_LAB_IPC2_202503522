@@ -1,0 +1,38 @@
+@model IEnumerable<ControlAcademicoMvc.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "Listado de Estudiantes";
+}
+
+<div class="text-center mt-4">
+    <h1 class="display-4 text-primary fw-bold">Sistema de Control Académico</h1>
+    <p class="lead">Listado oficial en memoria (Simulación Tier 3)</p>
+</div>
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover table-striped mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="p-3">Carné</th>
+                        <th class="p-3">Nombre Completo</th>
+                        <th class="p-3">Promedio Académico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var estudiante in Model)
+                    {
+                        <tr>
+                            <td class="p-3 fw-bold text-secondary">@estudiante.Carne</td>
+                            <td class="p-3">@estudiante.Nombre</td>
+                            <td class="p-3">
+                                <span class="badge bg-success px-3 py-2">@estudiante.Promedio pts</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
